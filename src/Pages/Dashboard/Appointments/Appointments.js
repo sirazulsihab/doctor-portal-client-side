@@ -14,7 +14,7 @@ const Appointments = ({ date }) => {
     const [appointments, setAppointments] = useState([])
 
     useEffect(() => {
-        const url = `http://localhost:5000/appointments?email=${user.email}&date=${date}`
+        const url = `http://localhost:5000/appointments?email=${user.email}&date=${date.toLocaleDateString()}`
         fetch(url, {
             headers: {
                 'authorization': `Bearer ${token}`
