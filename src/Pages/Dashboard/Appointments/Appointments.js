@@ -26,6 +26,8 @@ const Appointments = ({ date }) => {
                 setAppointments(data)});
     }, [date])
 
+    console.log(appointments)
+
     return (
         <div>
             <h2>Appointments: {appointments.length}</h2>
